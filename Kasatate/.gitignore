@@ -1,5 +1,6 @@
 # files
-*.py
+test.py
+*.json
 
 #folders
 Cascades/
@@ -7,3 +8,6 @@ Weather/
 Adafruit_Python_GPIO/
 Adafruit_Python_PCA9685/
 Adafruit_Python_PureIO/
+Exps/__pycache__
+FacailRecoPrj/
+Exps/

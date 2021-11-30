@@ -11,7 +11,9 @@ OpenDesignで製作した傘と傘立てのハードウェアとソフトウェ�
   
  # SYSTEM
   
-  "生きた傘たち"のシステム図を貼る
+  ![画像の説明](img/kada_kada.png "kada")
+  ![画像の説明](img/kasatate_community.png "community")
+  ![画像の説明](img/kasatate_house.png "house")
   
  # Features
   

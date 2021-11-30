@@ -4,8 +4,11 @@
 天気に応じて傘の動きが変わる傘立てのソースコード。動きの例としては、雨の日であれば傘が喜び、晴れの日や曇りの日であれば退屈そうなゆっくりな動きとなり、風が強い日であれば怯える。使用している天気APIは気象庁のものであり、6時間置きにJSONファイルを取得する。
 
 ## 動画
+クリックすると動画のリンクに飛びます
+
 顔をトラッキングする傘  
-[![](https://img.youtube.com/vi/lEQB60Cla1I/0.jpg)](https://www.youtube.com/watch?v=lEQB60Cla1I)
+<!-- [![](https://img.youtube.com/vi/lEQB60Cla1I/0.jpg)](https://www.youtube.com/watch?v=lEQB60Cla1I) -->
+
 
 喜ぶ傘  
 [![](https://img.youtube.com/vi/JFexx1po1zk/0.jpg)](https://www.youtube.com/watch?v=JFexx1po1zk)

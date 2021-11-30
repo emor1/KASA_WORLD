@@ -1,7 +1,7 @@
 import cv2
 import RPi.GPIO as GPIO
 import Adafruit_PCA9685
-import serial
+# import serial
 import math
 import schedule
 import get_json as get_json
@@ -19,7 +19,7 @@ cap = cv2.VideoCapture(0)
 cap.set(3, 320)
 cap.set(4, 240)
 
-ser = serial.Serial('/dev/ttyUSB0', 115200)
+# ser = serial.Serial('/dev/ttyUSB0', 115200)
 
 weather = "hare"
 # weather = "ame"
@@ -82,9 +82,12 @@ if __name__ == "__main__":
         while True:
             schedule.run_pending()
             # Serial Communication for detecting umbrella
+            """
             data = ser.readline()
             data_clean = data.strip().decode('utf-8')
+            """
             ret, frame = cap.read()
+            """
             if data_clean == "16":
                 print(data_clean)
                 state = True
@@ -92,7 +95,7 @@ if __name__ == "__main__":
                 state = True
             else:
                 state = False
-
+            """
             if state:
                 ret, frame = cap.read()
                 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -100,8 +103,7 @@ if __name__ == "__main__":
                     gray, scaleFactor=1.2, minNeighbors=5, minSize=(20, 20))
 
                 for(x, y, w, h) in faces:
-                    cv2.rectangle(frame, (x, y), (x + w, y + h),
-                                  (255, 0, 0), 2)
+                    cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
                     roi_gray = gray[y:y + h, x:x + w]
                     roi_color = frame[y:y + h, x:x + w]
                     x_Pos = x + w / 2
@@ -125,7 +127,7 @@ if __name__ == "__main__":
         GPIO.cleanup()
         print("CleanUp")
         pwm.set_pwm(0, 0, 0)
-        ser.close()
+        # ser.close()
         pass
 
     pwm.set_pwm(0, 0, 0)
@@ -133,4 +135,4 @@ if __name__ == "__main__":
     print("CleanUp")
     cap.release()
     cv2.destroyAllWindows()
-    ser.close()
+    # ser.close()

@@ -1,0 +1,6 @@
+# files
+*.py
+
+#folders
+Cascades/
+Weather/

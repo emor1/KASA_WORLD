@@ -72,7 +72,7 @@ def update_wether_info():
 
 
 if __name__ == "__main__":
-    schedule.every(10).seconds.do(update_wether_info)
+    schedule.every(6).hours.do(update_wether_info)
     pwm = Adafruit_PCA9685.PCA9685()
     pwm.set_pwm_freq(set_freq)
     # state = Fals
